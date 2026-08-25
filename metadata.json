@@ -1,0 +1,6 @@
+{
+  "name": "WikiGame",
+  "description": "The encyclopedia for gamers - game guides, characters, items, maps, reviews, and community wiki.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
