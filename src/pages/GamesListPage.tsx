@@ -87,7 +87,16 @@ export const GamesListPage: React.FC<GamesListPageProps> = ({
     setSortBy('rating');
   };
 
+  const [visibleCount, setVisibleCount] = useState(24);
+
   const hasActiveFilters = searchTerm !== '' || selectedGenre !== 'All' || selectedPlatform !== 'All';
+
+  useEffect(() => {
+    // Reset visible count when filter changes
+    setVisibleCount(24);
+  }, [searchTerm, selectedGenre, selectedPlatform, sortBy]);
+
+  const displayedGames = filteredGames.slice(0, visibleCount);
 
   return (
     <div className="space-y-8 animate-in fade-in duration-200">
@@ -221,7 +230,7 @@ export const GamesListPage: React.FC<GamesListPageProps> = ({
 
       {/* Result stats */}
       <div className="flex items-center justify-between text-xs text-zinc-400">
-        <span>Showing <strong className="text-white">{filteredGames.length}</strong> video games</span>
+        <span>Showing <strong className="text-white">{displayedGames.length}</strong> of <strong className="text-white">{filteredGames.length}</strong> video games</span>
         {hasActiveFilters && (
           <span className="text-blue-400">Filtered results</span>
         )}
@@ -229,63 +238,82 @@ export const GamesListPage: React.FC<GamesListPageProps> = ({
 
       {/* Results View */}
       {filteredGames.length > 0 ? (
-        viewMode === 'grid' ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredGames.map((game) => (
-              <GameCard
-                key={game.id}
-                game={game}
-                onSelectGame={(slug) => onNavigate(`/games/${slug}`)}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="space-y-3">
-            {filteredGames.map((game) => (
-              <div
-                key={game.id}
-                onClick={() => onNavigate(`/games/${game.slug}`)}
-                className="group p-4 rounded-xl bg-[#11141d] hover:bg-[#151924] border border-zinc-800/80 hover:border-blue-500/40 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer"
+        <>
+          {viewMode === 'grid' ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {displayedGames.map((game) => (
+                <GameCard
+                  key={game.id}
+                  game={game}
+                  onSelectGame={(slug) => onNavigate(`/games/${slug}`)}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {displayedGames.map((game) => (
+                <div
+                  key={game.id}
+                  onClick={() => onNavigate(`/games/${game.slug}`)}
+                  className="group p-4 rounded-xl bg-[#11141d] hover:bg-[#151924] border border-zinc-800/80 hover:border-blue-500/40 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer"
+                >
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={game.coverImage}
+                      alt={game.title}
+                      loading="lazy"
+                      className="w-16 h-20 rounded-lg object-cover bg-zinc-800 shrink-0"
+                    />
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-heading font-bold text-base text-white group-hover:text-blue-400 transition-colors">
+                          {game.title}
+                        </h3>
+                        <span className="text-xs font-mono text-zinc-400">({game.releaseYear})</span>
+                      </div>
+
+                      <p className="text-xs text-zinc-400 line-clamp-1">
+                        {game.developer} &bull; {game.publisher}
+                      </p>
+
+                      <div className="flex flex-wrap items-center gap-1 pt-1">
+                        {game.genres.map((g) => (
+                          <span key={g} className="text-[10px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">
+                            {g}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex sm:flex-col items-center sm:items-end justify-between gap-2 border-t sm:border-t-0 pt-2 sm:pt-0 border-zinc-800 shrink-0">
+                    <RatingStars score={game.rating} count={game.ratingCount} size="sm" />
+                    <div className="flex items-center gap-1 text-xs font-semibold text-blue-400 group-hover:translate-x-1 transition-transform">
+                      <span>View Wiki</span>
+                      <ChevronRight size={14} />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Load More Button */}
+          {visibleCount < filteredGames.length && (
+            <div className="pt-8 flex flex-col items-center justify-center gap-2">
+              <button
+                type="button"
+                onClick={() => setVisibleCount((prev) => prev + 24)}
+                className="px-8 py-3 rounded-xl bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/40 hover:border-blue-600 font-semibold text-sm transition-all duration-200 shadow-lg cursor-pointer"
               >
-                <div className="flex items-center gap-4">
-                  <img
-                    src={game.coverImage}
-                    alt={game.title}
-                    className="w-16 h-20 rounded-lg object-cover bg-zinc-800 shrink-0"
-                  />
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-heading font-bold text-base text-white group-hover:text-blue-400 transition-colors">
-                        {game.title}
-                      </h3>
-                      <span className="text-xs font-mono text-zinc-400">({game.releaseYear})</span>
-                    </div>
-
-                    <p className="text-xs text-zinc-400 line-clamp-1">
-                      {game.developer} &bull; {game.publisher}
-                    </p>
-
-                    <div className="flex flex-wrap items-center gap-1 pt-1">
-                      {game.genres.map((g) => (
-                        <span key={g} className="text-[10px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">
-                          {g}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex sm:flex-col items-center sm:items-end justify-between gap-2 border-t sm:border-t-0 pt-2 sm:pt-0 border-zinc-800 shrink-0">
-                  <RatingStars score={game.rating} count={game.ratingCount} size="sm" />
-                  <div className="flex items-center gap-1 text-xs font-semibold text-blue-400 group-hover:translate-x-1 transition-transform">
-                    <span>View Wiki</span>
-                    <ChevronRight size={14} />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )
+                Load More Games ({filteredGames.length - visibleCount} remaining)
+              </button>
+              <span className="text-[11px] text-zinc-500">
+                Viewing {visibleCount} of {filteredGames.length} indexed titles
+              </span>
+            </div>
+          )}
+        </>
       ) : (
         <div className="py-16 text-center bg-[#11141d] rounded-2xl border border-zinc-800 space-y-4">
           <Filter size={36} className="mx-auto text-zinc-600" />

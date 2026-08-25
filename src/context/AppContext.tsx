@@ -78,14 +78,21 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Local storage keys
-  const STORAGE_PREFIX = 'wikigame_';
+  // Local storage keys with versioning to ensure 100+ real games load fresh
+  const STORAGE_PREFIX = 'wikigame_v2_';
 
   // Games State
   const [games, setGames] = useState<Game[]>(() => {
     const saved = localStorage.getItem(`${STORAGE_PREFIX}games`);
     if (saved) {
-      try { return JSON.parse(saved); } catch (e) { console.error(e); }
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length >= SAMPLE_GAMES.length) {
+          return parsed;
+        }
+      } catch (e) {
+        console.error(e);
+      }
     }
     return SAMPLE_GAMES;
   });

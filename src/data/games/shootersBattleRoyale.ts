@@ -1,0 +1,503 @@
+import { Game } from '../../types';
+
+export const SHOOTER_BR_GAMES: Game[] = [
+  {
+    id: 'game-fortnite',
+    slug: 'fortnite',
+    title: 'Fortnite',
+    tagline: 'Drop in, loot up, build, and outlast 99 other players in the world\'s biggest cultural Battle Royale phenomenon.',
+    coverImage: 'https://cdn1.epicgames.com/offer/fn/FNBR_CH5S3_EGS_Launcher_Blade_1200x1600_1200x1600-985ea84c9ecf8021a8d052a71cc32b90',
+    bannerImage: 'https://cdn2.unrealengine.com/egs-fortnite-hero-1920x1080.jpg',
+    developer: 'Epic Games',
+    publisher: 'Epic Games',
+    releaseDate: 'July 21, 2017',
+    releaseYear: 2017,
+    genres: ['Battle Royale', 'Action', 'Sandbox'],
+    platforms: ['PC', 'PlayStation', 'Xbox', 'Nintendo Switch', 'Android'],
+    rating: 9.4,
+    ratingCount: 9700,
+    isTrending: true,
+    isPopular: true,
+    overview: 'Fortnite is a world of many experiences. Drop onto the Island and compete to be the last player — or team — standing in Battle Royale or Zero Build, hang out with friends in concerts, or create your own games in Unreal Editor for Fortnite (UEFN).',
+    screenshots: [
+      'https://cdn2.unrealengine.com/egs-fortnite-hero-1920x1080.jpg',
+      'https://cdn1.epicgames.com/offer/fn/FNBR_CH5S3_EGS_Launcher_Blade_1200x1600_1200x1600-985ea84c9ecf8021a8d052a71cc32b90'
+    ]
+  },
+  {
+    id: 'game-cs2',
+    slug: 'counter-strike-2',
+    title: 'Counter-Strike 2',
+    tagline: 'The next chapter in the world\'s premiere tactical 5v5 competitive first-person shooter.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/header.jpg',
+    developer: 'Valve',
+    publisher: 'Valve',
+    releaseDate: 'September 27, 2023',
+    releaseYear: 2023,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC'],
+    rating: 9.6,
+    ratingCount: 8800,
+    isTrending: true,
+    isPopular: true,
+    isTopRated: true,
+    overview: 'For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players across the globe. Powered by the Source 2 engine, CS2 introduces volumetric reactive smoke, sub-tick server updates, overhauled audio, and redesigned maps like Mirage, Dust II, Inferno, and Nuke.',
+    gameplay: 'Two teams of 5 — Terrorists and Counter-Terrorists — battle over bomb defusal and hostage rescue objectives across 24-round MR12 matches. Mastery of recoil control, crosshair placement, economy management, and utility lineups defines competitive success.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/ss_8214227ad6e6fa30113f9f9353982bc4d8ad44ea.1920x1080.jpg',
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/ss_495333f07a2a07c3da334543167198bb6f5ca04f.1920x1080.jpg',
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/header.jpg'
+    ],
+    systemRequirements: {
+      minimum: {
+        os: 'Windows 10 64-bit',
+        cpu: '4 hardware CPU threads - Intel Core i5 750 or higher',
+        gpu: 'Video card with 1 GB VRAM or more, DirectX 11 compatible',
+        ram: '8 GB RAM',
+        storage: '85 GB available space'
+      },
+      recommended: {
+        os: 'Windows 11/10 64-bit',
+        cpu: 'Intel Core i7-9700K or AMD Ryzen 7 3700X',
+        gpu: 'NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700',
+        ram: '16 GB RAM',
+        storage: '85 GB SSD space'
+      }
+    }
+  },
+  {
+    id: 'game-csgo',
+    slug: 'counter-strike-global-offensive',
+    title: 'Counter-Strike: Global Offensive',
+    tagline: 'The iconic legendary tactical shooter that defined competitive esports for a decade.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg',
+    developer: 'Valve, Hidden Path Entertainment',
+    publisher: 'Valve',
+    releaseDate: 'August 21, 2012',
+    releaseYear: 2012,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC'],
+    rating: 9.7,
+    ratingCount: 9500,
+    overview: 'CS:GO expanded upon the team-based action gameplay that it pioneered when it was launched in 1999. Featuring maps, characters, weapons, and game modes, CS:GO delivered updated versions of classic CS content and hosted legendary esports Majors.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/header.jpg'
+    ]
+  },
+  {
+    id: 'game-valorant',
+    slug: 'valorant',
+    title: 'Valorant',
+    tagline: 'A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities.',
+    coverImage: 'https://cdn1.epicgames.com/offer/cbd5b3d355044b3e8b0fed9dda02f0b8/VAL_Hero_Vertical_1200x1600-9efca9e7e1f42252a16d56d10f443b7a',
+    bannerImage: 'https://cmsassets.rgpub.io/sanitise/images/client/val/val_ep9_act2_banner.jpg',
+    developer: 'Riot Games',
+    publisher: 'Riot Games',
+    releaseDate: 'June 2, 2020',
+    releaseYear: 2020,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC', 'PlayStation', 'Xbox'],
+    rating: 9.4,
+    ratingCount: 7900,
+    isTrending: true,
+    isPopular: true,
+    overview: 'Valorant is a free-to-play first-person tactical hero shooter developed and published by Riot Games. Players play as one of a set of Agents, characters designed based on several countries and cultures around the world. In the main game mode, players are assigned to either the attacking or defending team with each team having five players.',
+    gameplay: 'Blend tactical gunplay with supernatural radiant agent capabilities across Duelist, Initiator, Controller, and Sentinel roles. High-stakes spike plant & defusal matches test communication, reaction timing, and tactical map control.',
+    screenshots: [
+      'https://cmsassets.rgpub.io/sanitise/images/client/val/valorant-key-art.jpg',
+      'https://cdn1.epicgames.com/offer/cbd5b3d355044b3e8b0fed9dda02f0b8/VAL_Hero_Vertical_1200x1600-9efca9e7e1f42252a16d56d10f443b7a'
+    ]
+  },
+  {
+    id: 'game-apex-legends',
+    slug: 'apex-legends',
+    title: 'Apex Legends',
+    tagline: 'Conquer with character in an innovative free-to-play battle royale hero shooter.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1172470/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg',
+    developer: 'Respawn Entertainment',
+    publisher: 'Electronic Arts',
+    releaseDate: 'February 4, 2019',
+    releaseYear: 2019,
+    genres: ['Battle Royale', 'FPS', 'Action'],
+    platforms: ['PC', 'PlayStation', 'Xbox', 'Nintendo Switch'],
+    rating: 9.3,
+    ratingCount: 6900,
+    isTrending: true,
+    isPopular: true,
+    overview: 'Master a growing roster of legendary characters with powerful abilities and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg'
+    ]
+  },
+  {
+    id: 'game-pubg-battlegrounds',
+    slug: 'pubg-battlegrounds',
+    title: 'PUBG: BATTLEGROUNDS',
+    tagline: 'Land, loot, survive! The pioneer of 100-player Battle Royale warfare.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/578080/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg',
+    developer: 'KRAFTON, Inc.',
+    publisher: 'KRAFTON, Inc.',
+    releaseDate: 'December 21, 2017',
+    releaseYear: 2017,
+    genres: ['Battle Royale', 'FPS', 'Survival'],
+    platforms: ['PC', 'PlayStation', 'Xbox'],
+    rating: 9.1,
+    ratingCount: 7800,
+    isPopular: true,
+    overview: 'Drop into strategic locations, loot weapons and supplies, and survive to become the last team standing across diverse and expansive Battlegrounds like Erangel, Miramar, Taego, and Rondo.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg'
+    ]
+  },
+  {
+    id: 'game-pubg-mobile',
+    slug: 'pubg-mobile',
+    title: 'PUBG MOBILE',
+    tagline: 'The original Battle Royale phenomenon on mobile devices worldwide.',
+    coverImage: 'https://play-lh.googleusercontent.com/JRd05pyBH41qjEdOpWduAn0fDWNkdZAoR1A8U2o6q6CeOddCYbgE1842zkgedzvfUg=w512-h512',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg',
+    developer: 'LightSpeed & Quantum Studio, KRAFTON',
+    publisher: 'Level Infinite',
+    releaseDate: 'March 19, 2018',
+    releaseYear: 2018,
+    genres: ['Battle Royale', 'FPS', 'Action'],
+    platforms: ['Android', 'iOS'],
+    rating: 9.0,
+    ratingCount: 8400,
+    isPopular: true,
+    overview: 'PUBG MOBILE brings the authentic high-stakes survival Battle Royale experience to smartphones, featuring intense 10-minute matches, classic Erangel maps, payloads, and team deathmatches.',
+    screenshots: [
+      'https://play-lh.googleusercontent.com/JRd05pyBH41qjEdOpWduAn0fDWNkdZAoR1A8U2o6q6CeOddCYbgE1842zkgedzvfUg=w512-h512'
+    ]
+  },
+  {
+    id: 'game-free-fire',
+    slug: 'free-fire',
+    title: 'Garena Free Fire',
+    tagline: 'Fast-paced 50-player 10-minute battle royale action on mobile.',
+    coverImage: 'https://cdn.icon-icons.com/icons2/3914/PNG/512/garena_free_fire_logo_icon_248530.png',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg',
+    developer: '111dots Studio',
+    publisher: 'Garena',
+    releaseDate: 'December 4, 2017',
+    releaseYear: 2017,
+    genres: ['Battle Royale', 'Action'],
+    platforms: ['Android', 'iOS'],
+    rating: 8.9,
+    ratingCount: 9100,
+    isPopular: true,
+    overview: 'Garena Free Fire is a mobile battle royale game where 50 players parachute onto a remote island and fight for survival in rapid 10-minute matches with unique character skills and pet companions.',
+    screenshots: [
+      'https://cdn.icon-icons.com/icons2/3914/PNG/512/garena_free_fire_logo_icon_248530.png'
+    ]
+  },
+  {
+    id: 'game-cod-warzone',
+    slug: 'call-of-duty-warzone',
+    title: 'Call of Duty: Warzone',
+    tagline: 'Massive free-to-play combat arena featuring battle royale and resurgence action.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1938090/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg',
+    developer: 'Infinity Ward, Raven Software',
+    publisher: 'Activision',
+    releaseDate: 'March 10, 2020',
+    releaseYear: 2020,
+    genres: ['Battle Royale', 'FPS', 'Action'],
+    platforms: ['PC', 'PlayStation', 'Xbox'],
+    rating: 9.1,
+    ratingCount: 7300,
+    isPopular: true,
+    overview: 'Drop into expansive battlegrounds with up to 150 players, fight through the Gulag for a second chance at survival, call in custom weapon loadouts, and execute tactical contracts.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg'
+    ]
+  },
+  {
+    id: 'game-cod-mw',
+    slug: 'call-of-duty-modern-warfare',
+    title: 'Call of Duty: Modern Warfare',
+    tagline: 'The stakes have never been higher as players take on the role of lethal tier-one operators.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2000950/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2000950/header.jpg',
+    developer: 'Infinity Ward',
+    publisher: 'Activision',
+    releaseDate: 'October 25, 2019',
+    releaseYear: 2019,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC', 'PlayStation', 'Xbox'],
+    rating: 9.3,
+    ratingCount: 5700,
+    metacriticScore: 81,
+    overview: 'Experience a visceral campaign and pulse-pounding multiplayer arena in this critically acclaimed reboot featuring Captain Price and Task Force 141.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2000950/header.jpg'
+    ]
+  },
+  {
+    id: 'game-cod-mobile',
+    slug: 'call-of-duty-mobile',
+    title: 'Call of Duty: Mobile',
+    tagline: 'Iconic Call of Duty multiplayer and battle royale in the palm of your hands.',
+    coverImage: 'https://play-lh.googleusercontent.com/y3y3b7H72c7L42YQ7s833k7m8e8.png',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg',
+    developer: 'TiMi Studio Group',
+    publisher: 'Activision',
+    releaseDate: 'October 1, 2019',
+    releaseYear: 2019,
+    genres: ['FPS', 'Battle Royale', 'Action'],
+    platforms: ['Android', 'iOS'],
+    rating: 9.2,
+    ratingCount: 8200,
+    isPopular: true,
+    overview: 'Call of Duty: Mobile delivers console-quality HD gaming with customizable controls, 5v5 team deathmatches on iconic maps like Nuketown and Crash, plus 100-player battle royale.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg'
+    ]
+  },
+  {
+    id: 'game-overwatch-2',
+    slug: 'overwatch-2',
+    title: 'Overwatch 2',
+    tagline: 'An exhilarating free-to-play 5v5 team-based hero action game set in an optimistic future.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2357570/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg',
+    developer: 'Blizzard Entertainment',
+    publisher: 'Blizzard Entertainment',
+    releaseDate: 'August 10, 2023',
+    releaseYear: 2023,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC', 'PlayStation', 'Xbox', 'Nintendo Switch'],
+    rating: 8.8,
+    ratingCount: 6500,
+    isPopular: true,
+    overview: 'Overwatch 2 is an always-on, free-to-play hero shooter featuring 40+ dynamic heroes across Tank, Damage, and Support roles, competing across escort, control, flashpoint, and push modes.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg'
+    ]
+  },
+  {
+    id: 'game-r6-siege',
+    slug: 'tom-clancys-rainbow-six-siege',
+    title: 'Tom Clancy\'s Rainbow Six Siege',
+    tagline: 'Master the art of destruction and tactical gadgets in intense close-quarters combat.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/359550/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg',
+    developer: 'Ubisoft Montreal',
+    publisher: 'Ubisoft',
+    releaseDate: 'December 1, 2015',
+    releaseYear: 2015,
+    genres: ['FPS', 'Action', 'Strategy'],
+    platforms: ['PC', 'PlayStation', 'Xbox'],
+    rating: 9.3,
+    ratingCount: 7100,
+    metacriticScore: 79,
+    isPopular: true,
+    overview: 'Dive into intense 5v5 close-quarters engagements, high-lethality tactical gunplay, and destructible wall and barricade environments with over 70 unique specialized operators.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg'
+    ]
+  },
+  {
+    id: 'game-marvel-rivals',
+    slug: 'marvel-rivals',
+    title: 'Marvel Rivals',
+    tagline: 'Assemble your all-star squad of Marvel heroes and villains in a thrilling 6v6 superhero team shooter.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2767030/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg',
+    developer: 'NetEase Games',
+    publisher: 'NetEase Games',
+    releaseDate: 'December 6, 2024',
+    releaseYear: 2024,
+    genres: ['Action', 'FPS'],
+    platforms: ['PC', 'PlayStation', 'Xbox'],
+    rating: 9.5,
+    ratingCount: 5200,
+    isTrending: true,
+    isNewRelease: true,
+    isPopular: true,
+    overview: 'Marvel Rivals is a 6v6 superhero team-based PVP shooter where players assemble an evolving roster of Marvel heroes and villains with unique dynamic Team-Up skills in destructible environments.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg'
+    ]
+  },
+  {
+    id: 'game-battlefield-2042',
+    slug: 'battlefield-2042',
+    title: 'Battlefield 2042',
+    tagline: 'All-out military warfare on an unprecedented scale with up to 128 players.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1517290/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg',
+    developer: 'DICE',
+    publisher: 'Electronic Arts',
+    releaseDate: 'November 19, 2021',
+    releaseYear: 2021,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC', 'PlayStation', 'Xbox'],
+    rating: 8.4,
+    ratingCount: 3800,
+    overview: 'Battlefield 2042 is a first-person shooter that marks the return to the iconic all-out warfare of the franchise, featuring dynamic storms, environmental hazards, and custom Battlefield Portal modes.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg'
+    ]
+  },
+  {
+    id: 'game-helldivers-2',
+    slug: 'helldivers-2',
+    title: 'Helldivers 2',
+    tagline: 'Join the Helldivers and fight for Freedom across a hostile galaxy in intense third-person co-op.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/553850/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/553850/header.jpg',
+    developer: 'Arrowhead Game Studios',
+    publisher: 'PlayStation Publishing LLC',
+    releaseDate: 'February 8, 2024',
+    releaseYear: 2024,
+    genres: ['Action', 'FPS', 'Adventure'],
+    platforms: ['PC', 'PlayStation'],
+    rating: 9.6,
+    ratingCount: 7400,
+    metacriticScore: 82,
+    isTrending: true,
+    isPopular: true,
+    isNewRelease: true,
+    overview: 'Enlist in the Helldivers and join the fight for freedom across a hostile galaxy. Team up with up to four friends and wreak havoc on Terminid bugs and Automaton robot hordes with heavy stratagems.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/553850/header.jpg'
+    ]
+  },
+  {
+    id: 'game-doom-eternal',
+    slug: 'doom-eternal',
+    title: 'DOOM Eternal',
+    tagline: 'Hell\'s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/782330/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/782330/header.jpg',
+    developer: 'id Software',
+    publisher: 'Bethesda Softworks',
+    releaseDate: 'March 20, 2020',
+    releaseYear: 2020,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC', 'PlayStation', 'Xbox', 'Nintendo Switch'],
+    rating: 9.7,
+    ratingCount: 6200,
+    metacriticScore: 88,
+    isTopRated: true,
+    overview: 'Experience the ultimate combination of speed and power in DOOM Eternal — the next leap in push-forward, first-person combat powered by the idTech 7 engine and heavy metal soundtrack.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/782330/header.jpg'
+    ]
+  },
+  {
+    id: 'game-half-life-2',
+    slug: 'half-life-2',
+    title: 'Half-Life 2',
+    tagline: 'By taking the suspense, challenge and visceral charge of the original, Half-Life 2 opened the door to a world where player presence influences everything.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/220/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/220/header.jpg',
+    developer: 'Valve',
+    publisher: 'Valve',
+    releaseDate: 'November 16, 2004',
+    releaseYear: 2004,
+    genres: ['FPS', 'Action', 'Adventure'],
+    platforms: ['PC'],
+    rating: 9.9,
+    ratingCount: 9600,
+    metacriticScore: 96,
+    isTopRated: true,
+    overview: 'The crowbar-wielding scientist Gordon Freeman finds himself on an alien-infested Earth being picked to the bone by the Combine empire. Armed with the Gravity Gun, Gordon leads human resistance in City 17.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/220/header.jpg'
+    ]
+  },
+  {
+    id: 'game-left-4-dead-2',
+    slug: 'left-4-dead-2',
+    title: 'Left 4 Dead 2',
+    tagline: 'Set in the zombie apocalypse, Left 4 Dead 2 is the highly anticipated sequel to the award-winning co-op shooter.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/550/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/550/header.jpg',
+    developer: 'Valve',
+    publisher: 'Valve',
+    releaseDate: 'November 17, 2009',
+    releaseYear: 2009,
+    genres: ['FPS', 'Action', 'Horror'],
+    platforms: ['PC', 'Xbox'],
+    rating: 9.8,
+    ratingCount: 8900,
+    metacriticScore: 89,
+    isTopRated: true,
+    isPopular: true,
+    overview: 'This co-operative action horror FPS takes you and your friends through the cities, swamps, and cemeteries of the Deep South, from Savannah to New Orleans across five expansive campaigns against infected swarms.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/550/header.jpg'
+    ]
+  },
+  {
+    id: 'game-team-fortress-2',
+    slug: 'team-fortress-2',
+    title: 'Team Fortress 2',
+    tagline: 'Nine distinct classes provide a broad range of tactical abilities and personalities.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/440/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/440/header.jpg',
+    developer: 'Valve',
+    publisher: 'Valve',
+    releaseDate: 'October 10, 2007',
+    releaseYear: 2007,
+    genres: ['FPS', 'Action'],
+    platforms: ['PC'],
+    rating: 9.6,
+    ratingCount: 8400,
+    metacriticScore: 92,
+    isPopular: true,
+    overview: 'One of the most popular online action games of all time, Team Fortress 2 delivers constant updates, new game modes, maps, equipment, and iconic class dynamics (Scout, Soldier, Pyro, Demoman, Heavy, Engineer, Medic, Sniper, Spy).',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/440/header.jpg'
+    ]
+  },
+  {
+    id: 'game-stalker-2',
+    slug: 'stalker-2-heart-of-chornobyl',
+    title: 'S.T.A.L.K.E.R. 2: Heart of Chornobyl',
+    tagline: 'Explore the vast Chornobyl Exclusion Zone full of dangerous enemies, deadly anomalies and powerful artifacts.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1643320/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1643320/header.jpg',
+    developer: 'GSC Game World',
+    publisher: 'GSC Game World',
+    releaseDate: 'November 20, 2024',
+    releaseYear: 2024,
+    genres: ['FPS', 'Survival', 'Horror', 'RPG'],
+    platforms: ['PC', 'Xbox'],
+    rating: 9.2,
+    ratingCount: 4100,
+    isNewRelease: true,
+    isTrending: true,
+    overview: 'Discover the vast Chornobyl Exclusion Zone full of dangerous mutants, rival factions, lethal anomalies, and legendary artifacts in this immersive post-apocalyptic survival shooter.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1643320/header.jpg'
+    ]
+  },
+  {
+    id: 'game-starfield',
+    slug: 'starfield',
+    title: 'Starfield',
+    tagline: 'In this next generation role-playing game set amongst the stars, create any character you want and explore with unparalleled freedom.',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1716740/library_600x900.jpg',
+    bannerImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg',
+    developer: 'Bethesda Game Studios',
+    publisher: 'Bethesda Softworks',
+    releaseDate: 'September 6, 2023',
+    releaseYear: 2023,
+    genres: ['RPG', 'FPS', 'Adventure'],
+    platforms: ['PC', 'Xbox'],
+    rating: 8.7,
+    ratingCount: 4800,
+    metacriticScore: 83,
+    overview: 'The year is 2330. Humanity has ventured beyond our solar system, settling new planets, and living as a spacefaring people. Join Constellation — the last group of space explorers seeking rare artifacts throughout the galaxy.',
+    screenshots: [
+      'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg'
+    ]
+  }
+];

@@ -16,95 +16,125 @@ export const GENRES_DATA: GenreInfo[] = [
     slug: 'action',
     description: 'High-intensity gameplay focusing on physical challenges, reflexes, and combat.',
     iconName: 'Swords',
-    coverImage: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop',
-    popularCount: 1420
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg',
+    popularCount: 1420,
+    count: 38
   },
   {
     name: 'Adventure',
     slug: 'adventure',
     description: 'Story-driven experiences exploring vast worlds, puzzles, and narrative choices.',
     iconName: 'Compass',
-    coverImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop',
-    popularCount: 980
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg',
+    popularCount: 980,
+    count: 32
   },
   {
     name: 'RPG',
     slug: 'rpg',
     description: 'Role-playing games with deep character progression, gear optimization, and quests.',
     iconName: 'Shield',
-    coverImage: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?q=80&w=800&auto=format&fit=crop',
-    popularCount: 1250
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg',
+    popularCount: 1250,
+    count: 28
   },
   {
     name: 'FPS',
     slug: 'fps',
     description: 'First-person shooters testing pinpoint marksmanship, tactical coordination, and speed.',
     iconName: 'Crosshair',
-    coverImage: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop',
-    popularCount: 890
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/730/header.jpg',
+    popularCount: 890,
+    count: 24
+  },
+  {
+    name: 'Battle Royale',
+    slug: 'battle-royale',
+    description: 'Massive survivor showdowns where only the last team or solo hero stands victorious.',
+    iconName: 'Flame',
+    coverImage: 'https://cdn2.unrealengine.com/egs-fortnite-hero-1920x1080.jpg',
+    popularCount: 780,
+    count: 14
+  },
+  {
+    name: 'MOBA',
+    slug: 'moba',
+    description: 'Multiplayer online battle arenas featuring intense 5v5 team tactical clashes.',
+    iconName: 'Users',
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/570/header.jpg',
+    popularCount: 950,
+    count: 6
   },
   {
     name: 'Horror',
     slug: 'horror',
     description: 'Thrilling and terrifying atmospheres with survival tension and spine-chilling encounters.',
     iconName: 'Ghost',
-    coverImage: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=800&auto=format&fit=crop',
-    popularCount: 460
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg',
+    popularCount: 460,
+    count: 12
   },
   {
     name: 'Racing',
     slug: 'racing',
     description: 'High-speed motorsport, hypercar customization, and exhilarating track battles.',
     iconName: 'Gauge',
-    coverImage: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=800&auto=format&fit=crop',
-    popularCount: 380
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg',
+    popularCount: 380,
+    count: 8
   },
   {
     name: 'Strategy',
     slug: 'strategy',
     description: 'Tactical command, base building, economic management, and 4X domination.',
     iconName: 'Brain',
-    coverImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
-    popularCount: 620
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg',
+    popularCount: 620,
+    count: 15
   },
   {
     name: 'Simulation',
     slug: 'simulation',
     description: 'Realistic recreation of flight, city management, farming, or daily life systems.',
     iconName: 'Cpu',
-    coverImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop',
-    popularCount: 510
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/227300/header.jpg',
+    popularCount: 510,
+    count: 14
   },
   {
     name: 'Survival',
     slug: 'survival',
     description: 'Resource gathering, crafting shelters, facing harsh elements, and staying alive.',
     iconName: 'Flame',
-    coverImage: 'https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?q=80&w=800&auto=format&fit=crop',
-    popularCount: 740
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg',
+    popularCount: 740,
+    count: 22
   },
   {
     name: 'Sandbox',
     slug: 'sandbox',
     description: 'Boundless creativity, open world freedom, construction, and player-driven mechanics.',
     iconName: 'Boxes',
-    coverImage: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=800&auto=format&fit=crop',
-    popularCount: 830
+    coverImage: 'https://images.ctfassets.net/4cd45et68cgf/5y4h3b1H170E36aO6Q64c0/9df9b90a6ea158525b68233f2a36b325/Minecraft-Bedrock-1.20-Trails-and-Tales-Key-Art-1920x1080.jpg',
+    popularCount: 830,
+    count: 18
   },
   {
     name: 'Sports',
     slug: 'sports',
     description: 'Competitive football, basketball, combat sports, and tournament athletics.',
     iconName: 'Trophy',
-    coverImage: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop',
-    popularCount: 340
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2195250/header.jpg',
+    popularCount: 340,
+    count: 8
   },
   {
     name: 'MMORPG',
     slug: 'mmorpg',
     description: 'Persistent online universes with millions of players, epic raids, and guild economies.',
     iconName: 'Users',
-    coverImage: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop',
-    popularCount: 670
+    coverImage: 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2344520/header.jpg',
+    popularCount: 670,
+    count: 10
   }
 ];

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Game } from '../../types';
 import { RatingStars } from './RatingStars';
 import { PlatformBadge } from './PlatformBadge';
-import { Heart, ChevronRight, Sparkles, Flame } from 'lucide-react';
+import { Heart, ChevronRight, Sparkles, Flame, Gamepad2 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 
 interface GameCardProps {
@@ -18,9 +18,8 @@ export const GameCard: React.FC<GameCardProps> = ({
 }) => {
   const { isFavorite, toggleFavorite } = useApp();
   const [imageError, setImageError] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const favorited = isFavorite(game.id);
-
-  const fallbackUrl = 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop';
 
   const handleClick = (e: React.MouseEvent) => {
     // Prevent trigger if clicking favorite button
@@ -32,6 +31,8 @@ export const GameCard: React.FC<GameCardProps> = ({
     }
   };
 
+  const imageSrc = imageError ? game.bannerImage || game.coverImage : game.coverImage;
+
   return (
     <div
       id={`game-card-${game.slug}`}
@@ -40,13 +41,27 @@ export const GameCard: React.FC<GameCardProps> = ({
     >
       {/* Cover Image Container */}
       <div className="relative aspect-16/10 w-full overflow-hidden bg-zinc-900">
-        <img
-          src={imageError ? fallbackUrl : game.coverImage}
-          alt={game.title}
-          onError={() => setImageError(true)}
-          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-        />
+        {!isLoaded && !imageError && (
+          <div className="absolute inset-0 bg-zinc-800/60 animate-pulse" />
+        )}
+
+        {imageError && !imageSrc ? (
+          <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-900 text-zinc-600 p-4 text-center">
+            <Gamepad2 size={32} className="text-zinc-700 mb-1" />
+            <span className="text-xs font-semibold text-zinc-400">{game.title}</span>
+          </div>
+        ) : (
+          <img
+            src={imageSrc}
+            alt={game.title}
+            onLoad={() => setIsLoaded(true)}
+            onError={() => setImageError(true)}
+            className={`w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105 ${
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            loading="lazy"
+          />
+        )}
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-[#11141d] via-transparent to-black/30 pointer-events-none" />
